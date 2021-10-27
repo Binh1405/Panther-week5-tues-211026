@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {useState} from 'react'
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, FloatingLabel } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -205,8 +205,13 @@ function Exercise5 () {
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>About</Form.Label>
-    <Form.Control type="password" placeholder="About yourself" />
+    <FloatingLabel controlId="floatingTextarea2" label="About you">
+    <Form.Control
+      as="textarea"
+      placeholder="Leave a comment here"
+      style={{ height: '200px' }}
+    />
+  </FloatingLabel>
   </Form.Group>
 
   <Button variant="primary" type="submit">
